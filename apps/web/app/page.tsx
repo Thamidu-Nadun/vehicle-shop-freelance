@@ -1,9 +1,13 @@
-import { Navbar } from "@repo/ui/navbar";
+import Navbar from "../Components/Navbar/Navbar";
+import Hero from "./_home/Hero";
+import Partners from "./_home/Partners";
+
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen bg-orange-50">
       <Navbar />
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Hero />
+      <Partners />
     </div>
   );
 }
