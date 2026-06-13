@@ -1,7 +1,7 @@
 import "@repo/ui/styles.css";
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "../Components/Navbar/Navbar";
+import Navbar from "@/Components/Navbar/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Turborepo",
