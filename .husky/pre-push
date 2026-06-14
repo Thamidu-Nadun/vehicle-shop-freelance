@@ -18,7 +18,7 @@ echo ""
 echo -e "${CYAN}Here's a joke for you:${RESET}"
 echo ""
 
-joke=$(curl -k -H "Accept: text/plain" -H "User-Agent: curl" https://icanhazdadjoke.com/)
+joke=$(curl -skH "Accept: text/plain" -H "User-Agent: curl" https://icanhazdadjoke.com/)
 
 if [ -z "$joke" ]; then
     joke="Why do programmers prefer dark mode? Because light attracts bugs 😄"
