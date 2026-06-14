@@ -1,0 +1,11 @@
+echo "Hello I am 🐶";
+echo "Let's check your code!"
+
+pnpm run lint
+
+echo "Alright you passed this time, I'll format your code 🐶"
+pnpm run format
+
+echo "Okay now you are good to go";
+echo "Here is joke that my dad used to say";
+curl -kH "Accept: text/plain" https://icanhazdadjoke.com/

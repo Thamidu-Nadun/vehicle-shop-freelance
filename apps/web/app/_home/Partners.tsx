@@ -13,8 +13,6 @@ const testimonials = [
 ];
 
 const Partners = () => {
-  const items = [...testimonials, ...testimonials];
-
   return (
     <Fragment>
       <style>
