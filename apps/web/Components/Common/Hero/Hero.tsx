@@ -10,7 +10,7 @@ const Hero = ({ children }: { children: React.ReactNode }) => {
       />
 
       <div className="absolute inset-0 bg-linear-to-r from-[#261814]/90 via-[#261814]/60 to-transparent" />
-      <div className="relative z-10 max-w-lg ml-4">{children}</div>
+      <div className="relative z-10 ml-4">{children}</div>
     </div>
   );
 };
