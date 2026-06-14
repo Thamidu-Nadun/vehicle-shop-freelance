@@ -3,11 +3,8 @@ echo "Let's check your code!"
 
 pnpm run lint
 
-echo "Alright you passed this time, I'll format your code 🐶"
+echo "Alright you passed this time, I'll format your code now 🐶"
 pnpm run format
 
 git add .
-clear
 echo "Okay now you are good to go";
-echo "Here is joke that my dad used to say";
-curl -kH "Accept: text/plain" https://icanhazdadjoke.com/

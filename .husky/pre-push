@@ -1,0 +1,4 @@
+echo "Well done! you made it, keep up the good work!"
+
+echo "Here's a joke for you:"
+curl -kH "Accept: text/plain" https://icanhazdadjoke.com/
