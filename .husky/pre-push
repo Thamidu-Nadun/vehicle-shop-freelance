@@ -2,10 +2,9 @@
 
 set +e
 
-# Colors
-MAGENTA="\033[0;35m"
+GREEN="\033[0;32m"
 CYAN="\033[0;36m"
-BOLD="\033[1m"
+YELLOW="\033[1;33m"
 RESET="\033[0m"
 
 echo "===================================="
@@ -19,19 +18,13 @@ echo ""
 echo -e "${CYAN}Here's a joke for you:${RESET}"
 echo ""
 
-joke=$(curl -s --fail -H "Accept: text/plain" https://icanhazdadjoke.com/)
+joke=$(curl -k -H "Accept: text/plain" -H "User-Agent: curl" https://icanhazdadjoke.com/)
 
 if [ -z "$joke" ]; then
     joke="Why do programmers prefer dark mode? Because light attracts bugs 😄"
 fi
 
-echo -e "${MAGENTA}${BOLD}"
-echo "╔════════════════════════════════════════════╗"
-echo "║              😂  JOKE TIME  😂              ║"
-echo "╠════════════════════════════════════════════╣"
-echo "$joke" | sed 's/^/║ /' | sed 's/$/ ║/'
-echo "╚════════════════════════════════════════════╝"
-echo -e "${RESET}"
+echo -e "${YELLOW}$joke${RESET}"
 
 echo ""
 echo "Remember, every push is a step towards greatness. Keep pushing and keep smiling! 😊"
