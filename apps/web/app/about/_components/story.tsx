@@ -1,39 +1,42 @@
-import Image from "next/image";
-import React from "react";
+import AboutCard from "./AboutCard";
 
 const Story = () => {
   return (
-    <div className="w-full h-full grid md:grid-cols-2 gap-8">
-      <div className="p-4 flex flex-col justify-center">
-        <div className="max-w-2xl px-6">
-          <div className="text-md text-orange-800">OUR HERITAGE</div>
-          <h2 className="text-4xl text-black font-semibold">
+    <div className="w-full h-full grid md:grid-cols-6 gap-8 p-6">
+      <div
+        className="p-4 h-100 flex flex-col justify-center col-span-4 rounded-2xl shadow-md
+       bg-brand/12 border border-brand/20"
+      >
+        <div className="px-6 max-w-200">
+          <div className="text-sm text-brand-pressed">OUR HERITAGE</div>
+          <h2 className="text-3xl text-black font-poppins font-bold mt-2">
             From a Small Shop to a Community Staple
           </h2>
-          <div className="mt-4 text-orange-950/90 text-md">
+          <div className="mt-4 text-orange-950/90 text-sm font-inter">
             <p>
               Achala Motors began as a modest two-bay workshop in 2004, driven
               by a simple philosophy: treat every customer like family. Founded
               by the Achala brothers, the business focused on technical
-              precision and transparent communication—values that were often
-              missing in the industry at the time.
+              precision and transparent communication.
             </p>
             <p className="mt-4">
-              Today, while our showroom has grown and our inventory features the
-              finest selections, that same spirit remains. We aren&apos;t just
-              selling cars; we are continuing a legacy of reliability that has
-              powered thousands of journeys across the region.
+              Today, while our showroom has grown, that same spirit remains. We
+              aren&apos;t just selling cars; we are continuing a legacy of
+              reliability that has powered thousands of journeys across the
+              region.
             </p>
           </div>
         </div>
       </div>
-      <div className="p-8">
-        <Image
-          src="/img/about-us.png"
-          alt="Our Story"
-          width={200}
-          height={100}
-          className="rounded-lg object-cover w-full h-full"
+      <div className="col-span-2 flex flex-col gap-4 justify-between">
+        <AboutCard
+          name="Integrity First"
+          description="No hidden fees, no misleading claims—just honest advice and fair pricing."
+        />
+        <AboutCard
+          name="Quality guarenteed"
+          description="Every vehicle undergoes a rigorous 150-point
+inspection before sale."
         />
       </div>
     </div>

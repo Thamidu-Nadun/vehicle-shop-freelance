@@ -1,10 +1,12 @@
 import Hero from "@/Components/Common/Hero/Hero";
 import { Button } from "@repo/ui/button";
 import Story from "./_components/story";
+import Selection from "./_components/selection";
+import JoinUs from "./_components/joinUs";
 
 const aboutPage = () => {
   return (
-    <div className="w-full h-full bg-[#f9f9f9]">
+    <div className="w-full h-full bg-surface-soft">
       <Hero>
         <div className="max-w-2xl">
           <h2 className="text-5xl text-white font-bold">
@@ -22,7 +24,15 @@ const aboutPage = () => {
           </div>
         </div>
       </Hero>
-      <Story />
+      <div className="my-18">
+        <Story />
+      </div>
+      <div className="my-18">
+        <Selection />
+      </div>
+      <div className="my-18">
+        <JoinUs />
+      </div>
     </div>
   );
 };
