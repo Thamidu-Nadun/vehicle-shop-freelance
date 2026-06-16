@@ -23,7 +23,7 @@ const JoinUs = () => {
 
           <button className="group rounded-2xl bg-white px-7 py-4 font-semibold text-[#f0561e] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-50 hover:shadow-2xl">
             <span className="flex items-center gap-2">
-              Explore Inventory
+              Find My Car
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
                 fill="none"

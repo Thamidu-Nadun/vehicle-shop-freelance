@@ -94,13 +94,9 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--color-body);
+  background: var(--color-surface-soft);
+  background-image: none;
 }
 
 .section-title::before,
@@ -108,4 +104,12 @@ body {
   content: "—";
   color: var(--color-muted-soft);
   margin: 0 8px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

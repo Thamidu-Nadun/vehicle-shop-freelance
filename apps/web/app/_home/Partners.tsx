@@ -41,7 +41,7 @@ const Partners = () => {
         `}
       </style>
 
-      <section className="overflow-hidden py-12">
+      <section className="overflow-x-hidden py-12">
         <div className="scroll flex w-max">
           {testimonials.map((item, i) => (
             <Card key={`a-${i}`} name={item} />

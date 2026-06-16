@@ -19,22 +19,19 @@ const aboutPage = () => {
           </p>
           <div className="mt-6 flex gap-4">
             <Button variant="primary" name="Explore Our Services" />
-            {/* <button className="border text-orange-800 rounded-md hover:bg-orange-500 hover:text-white px-4 py-2 transition-colors duration-300">
-            Get in Touch
-          </button> */}
           </div>
         </div>
       </Hero>
-      <div className="my-18">
+      <div className="mt-26">
         <Story />
       </div>
-      <div className="my-18">
+      <div className="mt-24">
         <Selection />
       </div>
-      <div className="my-18">
+      <div className="mt-24">
         <Members />
       </div>
-      <div className="my-18">
+      <div className="mt-24">
         <JoinUs />
       </div>
     </div>

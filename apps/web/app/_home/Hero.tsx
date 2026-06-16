@@ -1,4 +1,5 @@
 import { Button } from "@repo/ui/button";
+import Image from "next/image";
 const Hero = () => {
   return (
     <div className="w-full h-[calc(100vh-3rem)] bg-orange-50 text-black grid grid-cols-1 md:grid-cols-2">
@@ -24,7 +25,16 @@ const Hero = () => {
           <Button variant="secondary" name="Whatsapp Us" />
         </div>
       </div>
-      <div className="col-span-1 border"></div>
+      <div className="col-span-1 w-full h-full flex items-center justify-center">
+        <Image
+          src="/img/cars/car-1-3d.png"
+          alt="Car"
+          width={200}
+          height={200}
+          className="h-full w-full object-contain transition-transform duration-700
+           hover:scale-105 -translate-y-15"
+        />
+      </div>
     </div>
   );
 };

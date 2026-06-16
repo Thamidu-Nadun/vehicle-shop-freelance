@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/Components/Navbar/Navbar";
 import { Poppins, Inter, Ballet } from "next/font/google";
+import Footer from "@/Components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Turborepo",
@@ -33,12 +34,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" data-yd-content="true" data-yd-content-ready="true">
       <body
-        className={`w-screen ${poppins.variable} ${inter.variable} ${ballet.variable} font-sans bg-[#f9f9f9]`}
+        className={`w-full ${poppins.variable} ${inter.variable} ${ballet.variable} font-sans bg-surface-soft`}
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
