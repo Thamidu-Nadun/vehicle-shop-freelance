@@ -3,6 +3,7 @@ import { Button } from "@repo/ui/button";
 import Story from "./_components/story";
 import Selection from "./_components/selection";
 import JoinUs from "./_components/joinUs";
+import Members from "./_components/members";
 
 const aboutPage = () => {
   return (
@@ -29,6 +30,9 @@ const aboutPage = () => {
       </div>
       <div className="my-18">
         <Selection />
+      </div>
+      <div className="my-18">
+        <Members />
       </div>
       <div className="my-18">
         <JoinUs />

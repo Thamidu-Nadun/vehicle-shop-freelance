@@ -3,7 +3,7 @@ import React from "react";
 import { BadgeCheck } from "lucide-react";
 const Selection = () => {
   return (
-    <div className="grid gap-6 p-6 lg:grid-cols-2">
+    <div className="grid items-stretch gap-6 p-6 lg:grid-cols-2">
       {/* Content Side */}
       <div className="flex flex-col gap-4">
         <div className="relative overflow-hidden rounded-3xl border border-orange-200 bg-linear-to-br from-orange-50 to-white p-8 shadow-lg">
@@ -59,7 +59,7 @@ const Selection = () => {
             className="h-48 w-full rounded-2xl object-cover shadow-lg transition-transform duration-500 hover:scale-[1.03]"
           />
         </div>
-        <div className="overflow-hidden rounded-3xl border border-orange-200 bg-linear-to-r from-brand to-brand-hover p-6 text-white shadow-lg">
+        {/* <div className="overflow-hidden rounded-3xl border border-orange-200 bg-linear-to-r from-brand to-brand-hover p-6 text-white shadow-lg">
           <div className="flex flex-wrap items-center justify-center text-center gap-6">
             <div>
               <p className="text-sm text-orange-100 font-inter">
@@ -89,17 +89,16 @@ const Selection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Hero Image */}
-      <div className="group relative overflow-hidden rounded-3xl shadow-xl">
+      <div className="group relative h-full min-h-80 overflow-hidden rounded-3xl bg-brand shadow-xl">
         <Image
           src="/img/cars/car-dashboard.png"
           alt="Dashboard"
-          width={1200}
-          height={800}
-          className="h-full min-h-[500px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
 
         <div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/10 to-transparent" />
