@@ -3,7 +3,7 @@ import React from "react";
 const JoinUs = () => {
   return (
     <div className="w-full px-6">
-      <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-[#f0561e] to-[#e55a25] p-8 md:p-10">
+      <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-[#f0561e] to-primary p-8 md:p-10">
         {/* Background Accent */}
         <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full bg-white/10 blur-3xl" />
         <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-white/5 blur-2xl" />
