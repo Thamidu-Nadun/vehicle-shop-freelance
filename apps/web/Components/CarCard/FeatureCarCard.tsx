@@ -15,7 +15,7 @@ const FeatureCarCard = ({
   tags: string[];
 }) => {
   return (
-    <div className="w-80 max-w-sm h-90 shrink-0 rounded-3xl border border-gray-200 bg-white shadow-lg overflow-hidden">
+    <div className="w-80 max-w-sm h-90 shrink-0 rounded-3xl border border-gray-200 bg-white shadow-md hover:shadow-lg overflow-hidden">
       <Image
         src={image}
         alt={name}
