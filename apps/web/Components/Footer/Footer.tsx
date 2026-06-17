@@ -1,17 +1,34 @@
+import { LucideIcon, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import React from "react";
+
 type LinkSection = {
   sectionName: string;
   links: {
     name: string;
     url: string;
+    icon?: LucideIcon;
   }[];
 };
 const quickLinks: LinkSection[] = [
   {
     sectionName: "Contact Us",
     links: [
-      { name: "123 Main Street, Anytown, USA", url: "#" },
-      { name: "+94-777-4623-17", url: "#" },
-      { name: "example@ex.com", url: "#" },
+      {
+        name: "480, Colombo Road, Gampaha",
+        url: "#",
+        icon: MapPin,
+      },
+      {
+        name: "+94 77 123 4567",
+        url: "#",
+        icon: Phone,
+      },
+      {
+        name: "motors@nadun.dev",
+        url: "#",
+        icon: Mail,
+      },
     ],
   },
   {
@@ -53,9 +70,13 @@ const Footer = () => {
                 {section.sectionName}
               </h3>
               <ul className="mt-2">
-                {section.links.map((link) => (
-                  <li key={link.name} className="text-sm text-gray-200">
-                    {link.name}
+                {section.links.map((link, idx) => (
+                  <li key={idx} className="mt-2">
+                    <FooterLink
+                      name={link.name}
+                      url={link.url}
+                      Icon={link.icon}
+                    />
                   </li>
                 ))}
               </ul>
@@ -69,6 +90,26 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+  );
+};
+
+const FooterLink = ({
+  name,
+  url,
+  Icon,
+}: {
+  name: string;
+  url: string;
+  Icon: LucideIcon | undefined;
+}) => {
+  return (
+    <Link
+      href={url}
+      className="flex items-center gap-2 text-sm text-gray-200 hover:underline cursor-pointer hover:text-gray-100 hover:translate-x-1 transition-all duration-300"
+    >
+      {Icon && <Icon className="w-4 h-4" />}
+      {name}
+    </Link>
   );
 };
 

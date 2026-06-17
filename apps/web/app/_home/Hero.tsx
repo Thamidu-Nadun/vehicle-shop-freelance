@@ -1,5 +1,7 @@
 import { Button } from "@repo/ui/button";
 import Image from "next/image";
+import HeroTitle from "./components/HeroTitle";
+
 const Hero = () => {
   return (
     <div className="w-full h-[calc(100vh-3rem)] bg-orange-50 text-black grid grid-cols-1 md:grid-cols-2">
@@ -8,9 +10,7 @@ const Hero = () => {
       gap-5 px-10 -translate-y-10"
       >
         <div className="max-w-xl w-full">
-          <h2 className="text-5xl font-sans font-bold capitalize">
-            Find your <span className="text-orange-500">perfect</span> drive
-          </h2>
+          <HeroTitle />
         </div>
         <div>
           <p className="text-md text-gray-700/70 max-w-md">

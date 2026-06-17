@@ -46,17 +46,43 @@ const featuredCars: Car[] = [
     tags: ["Electric", "Automatic"],
   },
 ];
+const sliderSettings = {
+  moveSpeed: 400, // Speed of the slide transition in milliseconds
+  autoSlideInterval: 3000, // Interval for automatic sliding in milliseconds
+  behavior: "smooth" as ScrollBehavior, // Scroll behavior for the slide transition
+};
 
 const FeatureCars = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollRight = (side: "left" | "right") => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: side === "right" ? 300 : -300,
-        behavior: "smooth",
+        left:
+          side === "right"
+            ? sliderSettings.moveSpeed
+            : -sliderSettings.moveSpeed,
+        behavior: sliderSettings.behavior,
       });
     }
   };
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const el = scrollRef.current;
+  //     if (!el) return;
+
+  //     const isAtEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
+  //     if (isAtEnd) {
+  //       el.scrollTo({ left: 0, behavior: sliderSettings.behavior });
+  //     } else {
+  //       el.scrollBy({
+  //         left: sliderSettings.moveSpeed,
+  //         behavior: sliderSettings.behavior,
+  //       });
+  //     }
+  //   }, sliderSettings.autoSlideInterval);
+
+  //   return () => clearInterval(interval);
+  // }, []);
   return (
     <div className="w-full max-w-7xl mx-auto px-1 py-12">
       <div className="flex items-center justify-between">
