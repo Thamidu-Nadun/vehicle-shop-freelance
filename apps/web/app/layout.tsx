@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-yd-content="true" data-yd-content-ready="true">
       <body
-        className={`w-full ${poppins.variable} ${inter.variable} ${ballet.variable} font-sans bg-surface-soft`}
+        className={`w-full ${poppins.variable} ${inter.variable} ${ballet.variable} font-sans bg-surface-soft relative`}
       >
         <Navbar />
         {children}

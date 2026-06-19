@@ -8,7 +8,7 @@ const links: {
 }[] = [
   { name: "Home", url: "/" },
   { name: "About", url: "/about" },
-  { name: "Contact", url: "#" },
+  { name: "Inventory", url: "/inventory" },
   { name: "Blog", url: "#" },
 ];
 const Navbar = () => {
@@ -32,8 +32,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <button className="hidden md:block px-4 py-1.5 rounded-lg bg-orange-500 text-white">
-            Login
+          <button className="hidden md:block px-4 py-1.5 rounded-lg capitalize bg-orange-500 text-white">
+            find my car
           </button>
           <button
             className="md:hidden ml-2 px-4 py-1.5 rounded-lg bg-gray-300 text-black"
@@ -55,8 +55,8 @@ const Navbar = () => {
             <li className="hover:text-orange-500 cursor-pointer">Blog</li>
           </ul>
         </div>
-        <button className="mt-4 px-4 py-1.5 rounded-lg bg-orange-500 text-white">
-          Login
+        <button className="mt-4 px-4 py-1.5 rounded-lg capitalize bg-orange-500 text-white">
+          find my car
         </button>
       </div>
     </nav>

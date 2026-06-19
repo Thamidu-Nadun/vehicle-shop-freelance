@@ -1,14 +1,8 @@
 "use client";
 import FeatureCarCard from "@/Components/CarCard/FeatureCarCard";
+import { Car } from "@/types/model";
 import { useRef } from "react";
 
-type Car = {
-  id: string;
-  name: string;
-  image: string;
-  price: number;
-  tags: string[];
-};
 const featuredCars: Car[] = [
   {
     id: "1",
